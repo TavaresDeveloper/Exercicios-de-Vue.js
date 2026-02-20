@@ -71,7 +71,7 @@
     <div id="app">
            
         <div class="container">
-            <h2> <i class = "fa-solid fa-list-stick"></i>Lista de Tarefas</h2>
+            <h2> <i class = "fa-solid fa-list-check"></i>Lista de Tarefas</h2>
             <input v-model="novaTarefa" @keyup.enter="adicionarTarefa" placeholder="Adicionar nova tarefa">
             <button @click="adicionarTarefa"><i class="fa-solid fa-plus"></i></button>
 
@@ -107,7 +107,7 @@
             },
             computed:{
                     tarefasPendentes() {
-                        return this.tarefas.filter(tarefa => !tarefa.concluida).length;
+                        return this.tarefas.filter(t => !t.concluida).length;
                     }
 
             },
