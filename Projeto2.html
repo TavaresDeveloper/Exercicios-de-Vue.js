@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Lista de Filmes </title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 70%;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px;
+            cursor: pointer;
+            border: none;
+            background: #42b983;
+            color: white;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px;
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+    </style>
+    
+
+    <div id="app" class ="container">
+             
+        <h2><i class="fas fa-film"></i>Lista de Filmes</h2>
+
+        <input v-model="novoFilme" placeholder="Digite o nome do filme">
+        <button @click="adicionarFilme">Adicionar</button>
+        <p v-if = "novoFilme ==='' "> Nenhum filme cadastrado ainda</p>
+
+          <p v-show="filmes.length > 0">{{ filmes.length }} filme(s) cadastrado(s)</p>
+
+        
+
+    </div>
+    
+</body>
+</html>
