@@ -67,7 +67,7 @@
         <button @click="adicionarFilme">Adicionar</button>
         <p v-if = "novoFilme ==='' "> Nenhum filme cadastrado ainda</p>
 
-          <p v-show="filmes.length > 0"><i class="fa-check"></i>{{ filmes.length }} filme(s) cadastrado(s)</p>
+          <p v-show="filmes.length > 0"><i class="fas fa-check-circle"></i>{{ filmes.length }} filme(s) cadastrado(s)</p>
 
         <ul>
             <li v-for="(filme, index) in filmes" :key="index">
